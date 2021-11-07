@@ -133,3 +133,6 @@ dmypy.json
 .data/
 *.csv
 *.xlsx
+
+# Log Dirs
+.logs/
