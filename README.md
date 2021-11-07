@@ -1,4 +1,4 @@
-# LearningLanguage
+# Read The Paper
 Reading papers is one of the most important habits to fall into if one wishes to be a successful Machine Learning Engineer, an advice I have ignored for a long time.
 But its never too late, I have picked the habit of auditing as many papers as I can, but once in a while someone puts out work which redefines the landscape and through this repo my intention is to implement such milestone papers through `python`.
 
