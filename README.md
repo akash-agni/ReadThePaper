@@ -2,7 +2,7 @@
 Reading papers is one of the most important habits to fall into if one wishes to be a successful Machine Learning Engineer, an advice I have ignored for a long time.
 But its never too late, I have picked the habit of auditing as many papers as I can, but once in a while someone puts out work which redefines the landscape and through this repo my intention is to implement such milestone papers through `python`.
 
-* 1 -[Attention is All You Need](https://github.com/akash-agni/ReadThePaper/blob/main/Attention%20Is%20All%20You%20Need.ipynb")[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/akash-agni/LearningLanguage/blob/main/Attention%20Is%20All%20You%20Need.ipynb)
+* 1 -[Attention is All You Need](https://github.com/akash-agni/ReadThePaper/blob/main/Attention%20Is%20All%20You%20Need.ipynb)[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/akash-agni/LearningLanguage/blob/main/Attention%20Is%20All%20You%20Need.ipynb)
 
     <i>Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan N. Gomez, Lukasz Kaiser, Illia Polosukhin</i>
 
