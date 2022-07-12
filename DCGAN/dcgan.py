@@ -170,6 +170,7 @@ def main(
     b2,
     n_epochs,
     sampling_interval,
+    model_dir
 ):
     """Defines the model and performs training."""
     writer = SummaryWriter(log_dir=f".logs/dcgan/{strftime('%d%m%Y_%H%M%S')}")
@@ -222,7 +223,7 @@ def main(
     batch_size = len(data_loader)
     curr_min_g_loss = float("inf")
     curr_min_d_loss = float("inf")
-    os.makedirs(".model/dcgan/", exist_ok=True)
+    os.makedirs(model_dir, exist_ok=True)
 
     for epoch in tqdm(range(n_epochs)):
         mean_g_loss, mean_d_loss = 0, 0
@@ -386,13 +387,13 @@ if __name__ == "__main__":
     sampling_interval = args.sampling_interval
     model_dir = args.model_dir
 
-    os.makedirs(".logs/dcgan/", exist_ok=True)
+    os.makedirs(args.log_dir, exist_ok=True)
     log_file = os.path.join(args.log_dir, "dcgan_training.log")
     logging.basicConfig(
         level=logging.INFO,
         filename=log_file,
         filemode="w",
-        format="%(timestamp)s - %(name)s - %(levelname)s - %(message)s",
+        format="%(name)s - %(levelname)s - %(message)s",
     )
 
     main(
