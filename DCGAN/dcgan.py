@@ -44,10 +44,10 @@ class Generator(nn.Module):
             nn.BatchNorm2d(128, 0.8),
             nn.LeakyReLU(0.2, inplace=True),
             nn.Upsample(scale_factor=2),
-            nn.Conv2d(128, 64, 3, stride=1, padding=1),
-            nn.BatchNorm2d(64, 0.8),
+            nn.Conv2d(128, 128, 3, stride=1, padding=1),
+            nn.BatchNorm2d(128, 0.8),
             nn.LeakyReLU(0.2, inplace=True),
-            nn.Conv2d(64, channels, 3, stride=1, padding=1),
+            nn.Conv2d(128, channels, 3, stride=1, padding=1),
             nn.Tanh(),
         )
 
@@ -83,6 +83,7 @@ class Discriminator(nn.Module):
             *discriminator_block(16, 32),
             *discriminator_block(32, 64),
             *discriminator_block(64, 128),
+            *discriminator_block(128, 512)
         )
 
         ds_size = img_size // 2**4
@@ -284,7 +285,7 @@ def main(
                 )
                 img_to_show = cv2.imread(os.path.join(img_dir, f"{curr_iter}.png"), 1)
                 img_to_show = cv2.resize(
-                    img_to_show, (5 * 5 * img_size, 5 * 5 * img_size)
+                    img_to_show, (1 * 5 * img_size, 1 * 5 * img_size)
                 )
                 cv2.imshow("DCGAN Generator Samples", img_to_show)
                 cv2.waitKey(10)
@@ -312,22 +313,22 @@ if __name__ == "__main__":
         parser.add_argument(
             "--root",
             type=str,
-            default=os.path.join(".", ".data", "input", "dcgan"),
+            default=os.path.join(".", ".data", "input", "dcgan","cars"),
             help="location to store data.",
         )
         parser.add_argument(
             "--img_dir",
             type=str,
-            default=os.path.join(".", ".data", "output", "dcgan"),
+            default=os.path.join(".", ".data", "output", "dcgan","cars"),
             help="Location to store generated images.",
         )
         parser.add_argument(
-            "--latent_dim", type=int, default=100, help="size of noise vector."
+            "--latent_dim", type=int, default=500, help="size of noise vector."
         )
         parser.add_argument(
             "--img_shape",
             type=tuple,
-            default=(1, 32, 32),
+            default=(1, 64, 64),
             help="Shape of training and generated images",
         )
         parser.add_argument(
