@@ -80,4 +80,6 @@ Following approches can be used to remedy such condition.
 </ol>
 
 
-## Results
+## Conclusion
+
+GAN along with DCGAN is a milestone paper which has opened up new avenues when it comes to unsupervised learning. The adversial training approch provides a new way of training models which closely mimics real world learning process. It would very intresting to see how this area evolves.
