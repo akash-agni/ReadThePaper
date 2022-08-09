@@ -12,6 +12,8 @@ But its never too late, I have picked the habit of auditing as many papers as I 
 
     The notebook is inspired from <a href="https://github.com/bentrevett/pytorch-seq2seq">here</a> for more detailed turorial on earlier language models check out their work.
 
+    2 - Deep Convolutional Generative Adversial Network.
+
 ## References
 - https://github.com/bentrevett/pytorch-seq2seq
 - https://www.analyticsvidhya.com/blog/2019/06/understanding-transformers-nlp-state-of-the-art-models/
