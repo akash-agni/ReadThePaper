@@ -1,5 +1,7 @@
 # Understanding Deep Convolutional GAN
 
+<img src="../images/dcgan.gif"></img>
+
 In 2014 Ian Goodfellow et al. proposed a new approach for estimation of generative models through adversarial process. It involved training two separate models at the same time, a Generator model which attempts to model the data distribution and ad Discriminator which attempts to classify the input as either training data or fake data by generator.
 
 The paper sets a very important milestone in modern machine learning landscape, opening new avenues for unsupervised learning. Deep Convolutional GAN (Radford et al. 2015) continued building on this idea by applying the principles on a convolutional network to produce 2D images successfully.
@@ -58,7 +60,7 @@ Let’s look at the discriminator architecture in more detail.
 
 Layers 2 to 5 make up the core discriminator block which can be repeated N times to make model more complex per training data.
 
-## Adverbial Training
+## Adversarial Training
 
 As we are training two models simultaneously it could be tricky and one of the known problems with GAN's in general is mode collapse we will discuss more on that later.
 
@@ -81,4 +83,4 @@ Following approaches can be used to remedy such condition.
 
 ## Conclusion
 
-GAN along with DCGAN is a milestone paper which has opened new avenues when it comes to unsupervised learning. The adverbial training approach provides a new way of training models which closely mimics real world learning process. It would very intresting to see how this area evolves.
+GAN along with DCGAN is a milestone paper which has opened new avenues when it comes to unsupervised learning. The adversarial training approach provides a new way of training models which closely mimics real world learning process. It would very intresting to see how this area evolves.

@@ -313,13 +313,13 @@ if __name__ == "__main__":
         parser.add_argument(
             "--root",
             type=str,
-            default=os.path.join(".", ".data", "input", "dcgan","cars"),
+            default=os.path.join(".", ".data", "input", "mnist"),
             help="location to store data.",
         )
         parser.add_argument(
             "--img_dir",
             type=str,
-            default=os.path.join(".", ".data", "output", "dcgan","cars"),
+            default=os.path.join(".", ".data", "output", "mnist"),
             help="Location to store generated images.",
         )
         parser.add_argument(
@@ -361,13 +361,13 @@ if __name__ == "__main__":
         parser.add_argument(
             "--log_dir",
             type=str,
-            default=".logs/dcgan/mnist/",
+            default=".logs/mnist/",
             help="Location to store logs.",
         )
         parser.add_argument(
             "--model_dir",
             type=str,
-            default=".model/dcgan/mnist/",
+            default=".model/mnist/",
             help="Location to store models.",
         )
     except argparse.ArgumentError:
@@ -389,7 +389,7 @@ if __name__ == "__main__":
     model_dir = args.model_dir
 
     os.makedirs(args.log_dir, exist_ok=True)
-    log_file = os.path.join(args.log_dir, "dcgan_training.log")
+    log_file = os.path.join(args.log_dir, "training.log")
     logging.basicConfig(
         level=logging.INFO,
         filename=log_file,
